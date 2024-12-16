@@ -1,0 +1,29 @@
+<form (ngSubmit)="onSubmit()" >
+  <input type="text" placeholder="Search for your place" [(ngModel)]="search" name="search"/>
+  <span (click)="onSubmit()" class="pi pi-search"></span>
+</form>
+
+
+<div class="w-100 h-25">
+  <img [src]="currentLocation()?.condition?.icon" alt="image status" class="rounded-circle w-100 h-100"/>
+</div>
+
+<h2 class="display-1 fw-bold"> {{currentLocation()?.temp_c}}<sup class="fw-normal display-5">°C</sup> </h2>
+
+
+<div class="d-flex align-items-center justify-content-evenly w-100 mt-4">
+  <h3> {{ location() }} </h3>
+  <p class="mb-0">{{ currentLocation()?.last_updated | date: 'EEEE, MMM d h:mm a' }}</p>
+</div>
+
+<hr class="w-75" />
+
+<div class="status d-flex align-items-center justify-content-start w-75 ">
+  <img [src]="currentLocation()?.condition?.icon" alt="image status" />
+  <p class="mb-0 fw-semibold fs-5">{{ currentLocation()?.condition?.text }}</p>
+</div>
+
+<div class="time  d-flex align-items-center justify-content-start w-75 ms-5">
+  <span class="pi pi-clock fs-5"></span>
+  <p class="mb-0 fw-semibold fs-5 ms-3">{{ currentLocation()?.last_updated | date: 'shortTime' }}</p>
+</div>

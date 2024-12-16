@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  width: 350px;
+  background-color: #fff;
+  height: 97vh;
+  border-top-right-radius: 30px;
+  transform: translateY(8px);
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  margin-top: 40px;
+  position: relative;
+}
+
+form input {
+  width: 230px;
+  background-color: #eee;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+form span {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+}
+
+img {
+  object-fit: contain;
+}
