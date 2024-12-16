@@ -1,0 +1,14 @@
+@for(day of forecast; track $index) {
+  <app-each-day>
+    <span ngProjectAs="day">{{ day?.date | date: 'EEEE' }}</span>
+    <span ngProjectAs="icon">
+      <img [src]="day.day.condition.icon" [alt]="day.day.condition.text">
+    </span>
+
+    @if (degree === 'c') {
+      <span ngProjectAs="temp">{{ day.day.avgtemp_c }} °C</span>
+    } @else {
+      <span ngProjectAs="temp">{{ day.day.avgtemp_f }} °F</span>
+    }
+  </app-each-day>
+}

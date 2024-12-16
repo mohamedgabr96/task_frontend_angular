@@ -8,12 +8,20 @@
   <img [src]="currentLocation()?.condition?.icon" alt="image status" class="rounded-circle w-100 h-100"/>
 </div>
 
-<h2 class="display-1 fw-bold"> {{currentLocation()?.temp_c}}<sup class="fw-normal display-5">°C</sup> </h2>
+<h2 class="display-1 fw-bold">
+  @if (degree() === 'c') {
+    {{currentLocation()?.temp_c}}<sup class="fw-normal display-5">°C</sup>
+  } @else {
+  {{currentLocation()?.temp_f}}<sup class="fw-normal display-5">°F</sup>
+}
+
+
+</h2>
 
 
 <div class="d-flex align-items-center justify-content-evenly w-100 mt-4">
   <h3> {{ location() }} </h3>
-  <p class="mb-0">{{ currentLocation()?.last_updated | date: 'EEEE, MMM d h:mm a' }}</p>
+  <p class="mb-0">{{ currentLocation()?.last_updated | date: 'EEEE, MMM d' }}</p>
 </div>
 
 <hr class="w-75" />
@@ -25,5 +33,5 @@
 
 <div class="time  d-flex align-items-center justify-content-start w-75 ms-5">
   <span class="pi pi-clock fs-5"></span>
-  <p class="mb-0 fw-semibold fs-5 ms-3">{{ currentLocation()?.last_updated | date: 'shortTime' }}</p>
+  <p class="mb-0 fw-semibold fs-5 ms-3">{{ time | date: 'shortTime' }}</p>
 </div>

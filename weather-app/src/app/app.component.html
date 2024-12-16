@@ -2,4 +2,25 @@
   [location]="location()"
   (locationChange)="changeLocation($event)"
   [currentLocation]="current"
+  [degree]="degree()"
 />
+
+<div class="main">
+  <app-header
+    [location]="location()"
+    [degree]="degree()"
+    (degreeChange)="changeDegree($event)"
+  />
+
+  @if (forecast.length > 0) {
+    <app-forecast
+      [forecast]="forecast"
+      [degree]="degree()"
+    />
+
+    <h2>Today Highlights</h2>
+
+    <app-highlights [current]="current"/>
+  }
+
+</div>

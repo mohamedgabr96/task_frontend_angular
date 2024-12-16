@@ -11,11 +11,14 @@ import {MatDividerModule} from "@angular/material/divider";
   styleUrl: './sidenav.component.css'
 })
 export class SidenavComponent {
-  search!: string;
   location = input.required<string>();
-  locationChange = output<string>()
-
   currentLocation = input.required<any>();
+  degree = input.required<string>();
+
+  locationChange = output<string>();
+
+  search!: string;
+  time = Date.now()
 
   onSubmit(): void {
     const search = this.search;

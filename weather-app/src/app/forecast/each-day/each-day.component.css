@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  background: #fff;
+  margin: 16px 10px;
+  min-width: 120px;
+  padding: 10px;
+  box-shadow: 2px 6px 5px 1px #ccc;
+}

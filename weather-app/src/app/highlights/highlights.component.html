@@ -1,0 +1,48 @@
+<app-card>
+  <span ngProjectAs="title">CLoud</span>
+  <span ngProjectAs="image" class="d-block my-2">
+    <img src="/assets/cloud.png" alt="cloud" width="100px" height="100px">
+  </span>
+  <span ngProjectAs="value">{{ current?.cloud }}</span>
+</app-card>
+
+<app-card>
+  <span ngProjectAs="title">UV</span>
+  <span ngProjectAs="image">
+    <img src="/assets/uv.png" alt="cloud" width="100px" height="100px" class="d-block my-2">
+  </span>
+  <span ngProjectAs="value">{{ current?.uv }}</span>
+</app-card>
+
+<app-card>
+  <span ngProjectAs="title">Humidity</span>
+  <span ngProjectAs="image">
+    <img src="/assets/humidity.png" alt="cloud" width="100px" height="100px" class="d-block my-2">
+  </span>
+  <span ngProjectAs="value" class="fw-semibold">{{ current?.humidity }}</span>
+</app-card>
+
+<app-card>
+  <span ngProjectAs="title">Heat Index</span>
+  <span ngProjectAs="image">
+    <img src="/assets/heat.png" alt="cloud" width="100px" height="100px" class="d-block my-2">
+  </span>
+  <span ngProjectAs="value">{{ current?.heatindex_c }}</span>
+</app-card>
+
+<app-card>
+  <span ngProjectAs="title">Wind Direction</span>
+  <span ngProjectAs="image">
+    <img src="/assets/cardinal-points.png" alt="cloud" width="100px" height="100px" class="d-block my-2">
+  </span>
+  <span ngProjectAs="value">{{ current?.wind_dir }}</span>
+</app-card>
+
+<app-card>
+  <span ngProjectAs="title">Wind speed</span>
+  <span ngProjectAs="image">
+    <img src="/assets/wind.png" alt="cloud" width="100px" height="100px" class="d-block my-2">
+  </span>
+  <span ngProjectAs="value">{{ current?.wind_kph }}</span>
+</app-card>
+

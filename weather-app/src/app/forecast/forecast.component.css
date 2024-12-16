@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 30px 0;
+  padding-bottom: 30px;
+  align-items: center;
+  justify-content: space-around;
+  overflow-x: scroll;
+}
+
+app-each-day {
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+app-each-day:hover {
+  transform: translateY(10px);
+  cursor: pointer;
+}

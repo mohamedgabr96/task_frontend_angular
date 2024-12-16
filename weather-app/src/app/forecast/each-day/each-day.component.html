@@ -1,0 +1,12 @@
+<mat-card class="d-flex align-items-center flex-column">
+  <mat-card-content>
+    <ng-content select="day" />
+  </mat-card-content>
+
+  <ng-content select="icon" />
+
+  <mat-card-footer>
+    <ng-content select="temp" />
+  </mat-card-footer>
+
+</mat-card>

@@ -1,0 +1,24 @@
+<div class="pt-3 d-flex align-items-center justify-content-between">
+  <h3 class="display-5 fw-semibold">{{location() | uppercase }}</h3>
+
+  <div class="buttons pe-5">
+
+    <button
+      mat-mini-fab class="me-3 rounded-circle"
+      [class]="{'bg-dark': degree() === 'c', 'text-light': degree() === 'c'}"
+      (click)="onChangeDegree('c')"
+    >
+      <mat-icon>°C</mat-icon>
+    </button>
+
+    <button
+      mat-mini-fab class="rounded-circle"
+      [class]="{'bg-dark': degree() === 'f', 'text-light': degree() === 'f'}"
+      (click)="onChangeDegree('f')"
+    >
+      <mat-icon>°F</mat-icon>
+    </button>
+
+  </div>
+
+</div>

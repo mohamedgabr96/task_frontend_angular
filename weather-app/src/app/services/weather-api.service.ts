@@ -16,7 +16,8 @@ export class WeatherApiService {
     return this.http.get(`${this.apiURL}/forecast.json`, {
       params: {
         key: environment.apiKey,
-        q: `${location}`
+        q: `${location}`,
+        days: 14
       }
     })
   }
